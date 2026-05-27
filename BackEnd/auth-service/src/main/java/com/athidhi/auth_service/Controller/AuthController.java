@@ -5,7 +5,7 @@ import com.athidhi.auth_service.DTO.LoginRequest;
 import com.athidhi.auth_service.DTO.LoginResponse;
 import com.athidhi.auth_service.DTO.RegisterRequest;
 import com.athidhi.auth_service.DTO.RegisterResponse;
-import com.athidhi.auth_service.ErrorClasses.AthidhiException;
+import com.athidhi.auth_service.Exception.AthidhiException;
 import com.athidhi.auth_service.Service.AuthService;
 
 import lombok.*;

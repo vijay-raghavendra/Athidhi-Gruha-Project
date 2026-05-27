@@ -5,12 +5,10 @@ import com.athidhi.auth_service.DTO.LoginResponse;
 import com.athidhi.auth_service.DTO.RegisterRequest;
 import com.athidhi.auth_service.DTO.RegisterResponse;
 import com.athidhi.auth_service.Entity.User;
-import com.athidhi.auth_service.ErrorClasses.AthidhiException;
+import com.athidhi.auth_service.Exception.AthidhiException;
 import com.athidhi.auth_service.Repository.UserRepository;
 
 import lombok.*;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 

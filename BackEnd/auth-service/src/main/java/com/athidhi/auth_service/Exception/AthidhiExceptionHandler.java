@@ -1,4 +1,4 @@
-package com.athidhi.auth_service.ErrorClasses;
+package com.athidhi.auth_service.Exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

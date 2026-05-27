@@ -1,4 +1,4 @@
-package com.athidhi.auth_service.ErrorClasses;
+package com.athidhi.auth_service.Exception;
 
 import lombok.*;
 
