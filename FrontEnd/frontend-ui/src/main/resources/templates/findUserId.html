@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+
+        <title>Find userId or userName</title>
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap -->
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+        <!-- Bootstrap Icons -->
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+        <!-- CSS -->
+
+        <link rel="stylesheet" th:href="@{/css/findUserId.css}">
+    </head>
+
+    <body>
+
+        <div class="background-container">
+
+            <div class="overlay"></div>
+
+            <div class="findUserId-container">
+
+                <div class="findUserId-box">
+
+                    <h2 class="text-center text-white mb-4">
+                        Find UserID
+                    </h2>
+
+                    <form id="registerForm">
+
+                        <div class="row">
+
+                            <!-- Date of Birth -->
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label text-white">
+                                Date Of Birth
+                                    <span class="mandatory">*</span>
+                                </label>
+
+                                <input type="date" class="form-control custom-input" id="dob">
+                                <small class="error-message" id="dobError"></small>
+
+                            </div>
+
+                            <!-- MOBILE -->
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label text-white">
+                                Mobile Number
+                                    <span class="mandatory">*</span>
+                                </label>
+
+                                <div class="input-group">
+
+                                 <span class="input-group-text">
+                                 +91 </span>
+
+                                    <input type="text" class="form-control custom-input" id="mobileNumber"
+                                           maxlength="10">
+
+                                </div>
+
+                                <small class="error-message" id="mobileNumberError"></small>
+
+                            </div>
+
+                            <!-- EMAIL -->
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label text-white">
+                                    Email ID
+                                    <span class="mandatory">*</span>
+
+                                </label>
+
+                                <input type="text" class="form-control custom-input" id="email">
+
+                                <small class="error-message" id="emailError"></small>
+
+                            </div>
+
+                            <!-- BUTTON -->
+
+                            <button type="submit"
+                                    class="btn find-btn w-100">
+
+                                Find ID
+
+                            </button>
+
+                            <!-- LOGIN LINK -->
+
+                            <div class="text-center mt-3">
+
+                                <a th:href="@{/login}"
+                                   class="custom-link">
+
+                                    Remember userID or UserName? Login
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- SUCCESS MODAL -->
+
+        <div class="modal fade" id="successModal" tabindex="-1">
+
+            <div class="modal-dialog">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <h5 class="modal-title">
+                            User Search Successful
+                        </h5>
+
+                    </div>
+
+                    <div class="modal-body"
+                         id="successMessage">
+
+                    </div>
+
+                    <div class="modal-footer">
+
+                        <button type="button"
+                                class="btn btn-primary"
+                                id="okButton">
+
+                            OK
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Bootstrap JS -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- JS -->
+
+        <script th:src="@{/js/findUserId.js}"></script>
+
+    </body>
+
+</html>

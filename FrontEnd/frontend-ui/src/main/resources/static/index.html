@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loading...</title>
+
+    <style>
+        body {
+            text-align: center;
+            margin-top: 100px;
+            font-family: Arial;
+        }
+
+        /* Spinner
+        .spinner {
+            margin: 20px auto;
+            border: 6px solid #f3f3f3;
+            border-top: 6px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+        */
+
+        /*
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+        */
+
+        /* Progress bar */
+        .progress-container {
+            width: 50%;
+            margin: 20px auto;
+            background: #ddd;
+            border-radius: 20px;
+        }
+
+        .progress-bar {
+            height: 20px;
+            width: 0%;
+            background: #4caf50;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Redirecting in <span id="countdown">5</span> seconds...</h2>
+
+<!-- Spinner
+<div class="spinner"></div>
+-->
+
+<!-- Progress Bar -->
+<div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+</div>
+
+<script>
+    let timeLeft = 5;
+    let totalTime = 5;
+
+    let countdownElement = document.getElementById("countdown");
+    let progressBar = document.getElementById("progressBar");
+
+    let timer = setInterval(function () {
+
+        timeLeft--;
+
+        // Update countdown text
+        countdownElement.textContent = timeLeft;
+
+        // Update progress bar
+        let progress = ((totalTime - timeLeft) / totalTime) * 100;
+        progressBar.style.width = progress + "%";
+
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            window.location.href = /*[[@{/login}]]*/ "/login";
+        }
+
+    }, 1000);
+</script>
+
+</body>
+</html>
