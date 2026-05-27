@@ -1,10 +1,7 @@
 package com.athidhi.auth_service.Controller;
 
 
-import com.athidhi.auth_service.DTO.LoginRequest;
-import com.athidhi.auth_service.DTO.LoginResponse;
-import com.athidhi.auth_service.DTO.RegisterRequest;
-import com.athidhi.auth_service.DTO.RegisterResponse;
+import com.athidhi.auth_service.DTO.*;
 import com.athidhi.auth_service.Exception.AthidhiException;
 import com.athidhi.auth_service.Service.AuthService;
 
@@ -64,4 +61,23 @@ public class AuthController {
         return ResponseEntity.ok(response);
 
     }
+
+    @PostMapping("/verify-user")
+    public ResponseEntity<ForgotPasswordResponse> verifyUser(@RequestBody ForgotPasswordRequest request)
+            throws AthidhiException {
+
+        ForgotPasswordResponse response =authService.verifyUser(request);
+
+        return ResponseEntity.ok(response);
+    }
+
+    @PostMapping("/reset-password")
+    public ResponseEntity<ResetPasswordResponse> esetPassword(@RequestBody ResetPasswordRequest request)
+            throws AthidhiException {
+
+        ResetPasswordResponse response = authService.resetPassword(request);
+
+        return ResponseEntity.ok(response);
+    }
+
 }

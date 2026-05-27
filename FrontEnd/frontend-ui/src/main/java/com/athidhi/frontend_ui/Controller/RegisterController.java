@@ -12,9 +12,4 @@ public class RegisterController {
         return "register";
     }
 
-    @GetMapping("/findUserDetails")
-    public String findUserDetails()
-    {
-        return "findUserId";
-    }
 }

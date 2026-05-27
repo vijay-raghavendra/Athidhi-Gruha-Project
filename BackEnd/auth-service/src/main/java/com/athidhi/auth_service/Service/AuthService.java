@@ -1,9 +1,6 @@
 package com.athidhi.auth_service.Service;
 
-import com.athidhi.auth_service.DTO.LoginRequest;
-import com.athidhi.auth_service.DTO.LoginResponse;
-import com.athidhi.auth_service.DTO.RegisterRequest;
-import com.athidhi.auth_service.DTO.RegisterResponse;
+import com.athidhi.auth_service.DTO.*;
 import com.athidhi.auth_service.Entity.User;
 import com.athidhi.auth_service.Exception.AthidhiException;
 import com.athidhi.auth_service.Repository.UserRepository;
@@ -166,5 +163,32 @@ public class AuthService {
             throw new AthidhiException("Invalid Mobile Number or Email or DOB Details");
         }
 
+    }
+
+    public ForgotPasswordResponse verifyUser(ForgotPasswordRequest request) throws AthidhiException {
+
+        userRepository.findByUserIdAndDobAndMobileNumberAndEmail(
+                        request.getUserId(),
+                        request.getDob(),
+                        request.getMobileNumber(),
+                        request.getEmail()
+                )
+                .orElseThrow(() ->new AthidhiException("Entered details do not match")
+                );
+
+        return new ForgotPasswordResponse("Success","User Verified Successfully");
+    }
+
+    public ResetPasswordResponse resetPassword(ResetPasswordRequest request) throws AthidhiException {
+
+        User user = userRepository.findByUserId(request.getUserId())
+                        .orElseThrow(() -> new AthidhiException("User Not Found")
+                        );
+
+        user.setPassword(passwordEncoder.encode(request.getNewPassword()));
+
+        userRepository.save(user);
+
+        return new ResetPasswordResponse("Success","Password Reset Successful");
     }
 }

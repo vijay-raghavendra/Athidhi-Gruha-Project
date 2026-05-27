@@ -17,7 +17,7 @@ function validateDOB() {
 
     if(value==null || value=="" || value=='')
     {
-        showError("dob","Enter valid 10 digit number");
+        showError("dob","Enter valid Date of Birth");
     }
     else{
         clearFieldError("dob");

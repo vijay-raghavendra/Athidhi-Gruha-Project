@@ -10,4 +10,22 @@ public class LoginController {
     public String loginPage(){
         return "login";
     }
+
+    @GetMapping("/findUserDetails")
+    public String findUserDetails()
+    {
+        return "findUserId";
+    }
+
+    @GetMapping("/forgot-password")
+    public String forgotPasswordPage() {
+
+        return "forgot-password";
+    }
+
+    @GetMapping("/reset-password")
+    public String resetPasswordPage() {
+
+        return "reset-password";
+    }
 }
