@@ -19,7 +19,7 @@ function validateNewPassword() {
 
     const specialRule = /[@$!%*?&]/.test(value);
 
-    /*updateRule("ruleLength", lengthRule);
+    updateRule("ruleLength", lengthRule);
 
     updateRule("ruleUpper", upperRule);
 
@@ -27,7 +27,7 @@ function validateNewPassword() {
 
     updateRule("ruleNumber", numberRule);
 
-    updateRule("ruleSpecial", specialRule);*/
+    updateRule("ruleSpecial", specialRule);
 
     if (
         lengthRule &&
@@ -72,6 +72,21 @@ function validateConfirmPassword() {
         clearFieldError(
             "confirmPassword"
         );
+    }
+}
+
+function updateRule(ruleId, valid) {
+
+    const rule =
+        document.getElementById(ruleId);
+
+    if (valid) {
+
+        rule.classList.add("rule-valid");
+
+    } else {
+
+        rule.classList.remove("rule-valid");
     }
 }
 
