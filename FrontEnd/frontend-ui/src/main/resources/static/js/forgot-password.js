@@ -177,14 +177,30 @@ form.addEventListener("submit",function(event) {
 
                     sessionStorage.setItem("verifiedUserId",userId);
 
+                    showPopup(
+                              "success",
+                              "Verification Status",
+                               data.message,
+                               () =>
+                                     {
+                                        window.location.href ="/reset-password";
+                                     }
+                               );
+                    /* Commenting Old alert code
+
                     alert(data.message);
 
-                    window.location.href = "/reset-password";
+                    window.location.href = "/reset-password";*/
                 }
 
                 else
                 {
-                    alert(data.errorMessage);
+                    /*alert(data.errorMessage);*/
+                    showPopup(
+                        "error",
+                        "Verification Status",
+                         data.errorMessage
+                    );
                 }
             })
 
@@ -192,7 +208,12 @@ form.addEventListener("submit",function(event) {
 
                 console.error(error);
 
-                alert("Unable to connect to server");
+                /*alert("Unable to connect to server");*/
+                showPopup(
+                    "error",
+                    "Verification Status",
+                    error
+                );
             });
         }
     }

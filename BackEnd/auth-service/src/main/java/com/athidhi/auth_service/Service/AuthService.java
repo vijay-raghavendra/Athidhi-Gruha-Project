@@ -77,7 +77,7 @@ public class AuthService {
 
         /* RESPONSE */
 
-        return new RegisterResponse("Success",userId,"User Registered Successfully"
+        return new RegisterResponse("success",userId,"User Registered Successfully"
         );
     }
 
@@ -125,7 +125,7 @@ public class AuthService {
 
         String token = jwtService.generateToken(user.getUserId());
 
-        return new LoginResponse("Success", token, user.getUserId(), "Login Successful");
+        return new LoginResponse("success", token, user.getUserId(), "Login Successful");
     }
 
     public RegisterResponse findUserIdByEmailAndDob(String email, LocalDate dob) throws AthidhiException {
@@ -176,7 +176,7 @@ public class AuthService {
                 .orElseThrow(() ->new AthidhiException("Entered details do not match")
                 );
 
-        return new ForgotPasswordResponse("Success","User Verified Successfully");
+        return new ForgotPasswordResponse("success","User Verified Successfully");
     }
 
     public ResetPasswordResponse resetPassword(ResetPasswordRequest request) throws AthidhiException {
@@ -189,6 +189,6 @@ public class AuthService {
 
         userRepository.save(user);
 
-        return new ResetPasswordResponse("Success","Password Reset Successful");
+        return new ResetPasswordResponse("success","Password Reset Successful");
     }
 }

@@ -13,6 +13,7 @@ public class AthidhiExceptionHandler {
     {
         AthidhiErrorResponse  errorResponse = new AthidhiErrorResponse();
         errorResponse.setStatusCode(HttpStatus.BAD_REQUEST.value());
+        errorResponse.setStatusType("error");
         errorResponse.setErrorMessage(ex.getMessage());
         errorResponse.setTimestamp(System.currentTimeMillis());
 
@@ -24,6 +25,7 @@ public class AthidhiExceptionHandler {
     {
         AthidhiErrorResponse  errorResponse = new AthidhiErrorResponse();
         errorResponse.setStatusCode(HttpStatus.BAD_REQUEST.value());
+        errorResponse.setStatusType("error");
         errorResponse.setErrorMessage(ex.getMessage());
         errorResponse.setTimestamp(System.currentTimeMillis());
 

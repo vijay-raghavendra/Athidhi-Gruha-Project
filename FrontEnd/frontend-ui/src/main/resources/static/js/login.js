@@ -55,23 +55,47 @@ loginForm.addEventListener("submit",function(event) {
                 sessionStorage.setItem("token",data.token);
                 sessionStorage.setItem("userId",data.userId);
 
+                showPopup(
+                    data.status,
+                    "Login Status",
+                    data.message,
+                    () =>
+                        {
+                            window.location.href ="/dashboard";
+                        }
+                );
+
+                /*
+                Commenting the old Alerts
+
                 alert(data.message);
 
-                window.location.href ="/dashboard";
+                window.location.href ="/dashboard";*/
             }
 
             /* FAILURE */
 
             else
             {
-                alert(data.errorMessage ||"Invalid Credentials");
+                /*alert(data.errorMessage ||"Invalid Credentials");*/
+                showPopup(
+                    data.statusType,
+                    "Login Status",
+                    data.errorMessage
+
+                );
             }
         })
 
         .catch(error =>
         {
             console.error(error);
-            alert("Unable to connect to server");
+            /*alert("Unable to connect to server");*/
+            showPopup(
+                "error",
+                "Login Status",
+                error
+            );
         });
     }
 );

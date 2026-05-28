@@ -165,7 +165,7 @@ form.addEventListener("submit", function (event) {
 
                 if (response.ok) {
 
-                        document.getElementById("successMessage").innerHTML = data.message +" with User ID : " +data.userId;
+                        /*document.getElementById("successMessage").innerHTML = data.message +" with User ID : " +data.userId;
 
                          const successModal = new bootstrap.Modal(document.getElementById('successModal'));
 
@@ -174,20 +174,39 @@ form.addEventListener("submit", function (event) {
                          document.getElementById("okButton").onclick = function ()
                          {
                              window.location.href = "/login";
-                         };
+                         };*/
+                         showPopup(
+                            data.status,
+                            "UserID Search Status",
+                            data.message +" with User ID : " +data.userId,
+                            () =>
+                                {
+                                    window.location.href = "/login";
+                                }
+                         );
                 }
 
                 /* FAILURE */
 
                 else
                 {
-                    alert(data.message ||"Invalid Credentials");
+                    /*alert(data.message ||"Invalid Credentials");*/
+                    showPopup(
+                        data.statusType,
+                        "UserID Search Status",
+                        data.errorMessage
+                    );
                 }
 
 
             })
             .catch(error => {
-                alert("Registration Failed : " +error);
+                /*alert("Registration Failed : " +error);*/
+                showPopup(
+                    "error",
+                    "UserID Search Failed",
+                    error
+                );
             });
         }
 

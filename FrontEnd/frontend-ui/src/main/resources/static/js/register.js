@@ -506,27 +506,36 @@ form.addEventListener("submit", function (event) {
 
             if (response.ok) {
 
-                document.getElementById("successMessage").innerHTML = data.message +" with User ID : " + data.userId;
-
-                const successModal = new bootstrap.Modal(document.getElementById('successModal'));
-
-                successModal.show();
-
-                document.getElementById("okButton").onclick = function ()
-                {
-                    window.location.href = "/login";
-                };
+                showPopup(
+                    data.status,
+                    "Registration Status",
+                    data.message + " with User ID : " +data.userId,
+                    () =>
+                        {
+                            window.location.href = "/login";
+                        }
+                );
             }
             /* FAILURE */
             else
             {
-                alert(data.errorMessage ||"Invalid Credentials");
+                /*alert(data.errorMessage ||"Invalid Credentials");*/
+                showPopup(
+                    data.statusType,
+                    "Registration Status",
+                    data.errorMessage
+                );
             }
         })
         .catch(error => {
 
-            alert(
+            /*alert(
                 "Registration Failed : " +
+                error
+            );*/
+            showPopup(
+                "error",
+                "Registration status",
                 error
             );
         });

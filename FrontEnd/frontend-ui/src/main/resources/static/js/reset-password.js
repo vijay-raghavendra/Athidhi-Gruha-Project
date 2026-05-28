@@ -1,5 +1,93 @@
 const form = document.getElementById("resetPasswordForm");
 
+/* REAL TIME VALIDATIONS */
+document.getElementById("newPassword").addEventListener("input", validateNewPassword);
+
+document.getElementById("confirmPassword").addEventListener("input", validateConfirmPassword);
+
+function validateNewPassword() {
+
+    const value = document.getElementById("newPassword").value;
+
+    const lengthRule = value.length >= 8 && value.length <= 18;
+
+    const upperRule = /[A-Z]/.test(value);
+
+    const lowerRule = /[a-z]/.test(value);
+
+    const numberRule = /[0-9]/.test(value);
+
+    const specialRule = /[@$!%*?&]/.test(value);
+
+    /*updateRule("ruleLength", lengthRule);
+
+    updateRule("ruleUpper", upperRule);
+
+    updateRule("ruleLower", lowerRule);
+
+    updateRule("ruleNumber", numberRule);
+
+    updateRule("ruleSpecial", specialRule);*/
+
+    if (
+        lengthRule &&
+        upperRule &&
+        lowerRule &&
+        numberRule &&
+        specialRule
+    ) {
+
+        clearFieldError("newPassword");
+
+    } else {
+
+        showError(
+            "newPassword",
+            "Password does not meet requirements"
+        );
+    }
+}
+
+function validateConfirmPassword() {
+
+    const password =
+        document.getElementById(
+            "newPassword"
+        ).value;
+
+    const confirmPassword =
+        document.getElementById(
+            "confirmPassword"
+        ).value;
+
+    if (password !== confirmPassword) {
+
+        showError(
+            "confirmPassword",
+            "Passwords do not match"
+        );
+
+    } else {
+
+        clearFieldError(
+            "confirmPassword"
+        );
+    }
+}
+
+function clearFieldError(field) {
+
+    const input = document.getElementById(field);
+
+    input.classList.remove(
+        "invalid-field"
+    );
+
+    document.getElementById(
+        field + "Error"
+    ).innerText = "";
+}
+
 /* PASSWORD TOGGLE */
 
 toggleNewPassword.addEventListener("click", function () {
@@ -109,21 +197,45 @@ form.addEventListener(
 
                 if (response.ok) {
 
-                    alert(
+                    /* commenting old alert code */
+                    /*alert(
                         data.message
                     );
 
                     window.location.href =
-                        "/";
+                        "/";*/
+
+                    showPopup(
+                        "success",
+                        "Password Reset Successful",
+                        data.message,
+                        () =>
+                            {
+                                window.location.href ="/";
+                            }
+                    );
                 }
 
                 else {
 
-                    alert(
+                    showPopup(
+                        "error",
+                        "Password Reset Failed",
                         data.errorMessage
                     );
                 }
-            });
+            })
+
+            .catch(error => {
+
+                            console.error(error);
+
+                            showPopup(
+                                "error",
+                                "Password Status",
+                                error
+                            );
+                        });
         }
     }
 );

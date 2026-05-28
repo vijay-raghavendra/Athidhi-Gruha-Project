@@ -11,6 +11,8 @@ public class AthidhiErrorResponse {
 
     private int statusCode;
 
+    private String statusType;
+
     private String errorMessage;
 
     private long timestamp;
