@@ -5,6 +5,7 @@ import com.athidhi.auth_service.DTO.*;
 import com.athidhi.auth_service.Exception.AthidhiException;
 import com.athidhi.auth_service.Service.AuthService;
 
+import jakarta.validation.Valid;
 import lombok.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +21,7 @@ public class AuthController {
     private final AuthService authService;
 
     @PostMapping("/register")
-    public ResponseEntity<RegisterResponse> registerUser(@RequestBody RegisterRequest request) throws AthidhiException {
+    public ResponseEntity<RegisterResponse> registerUser(@Valid @RequestBody RegisterRequest request) throws AthidhiException {
 
         RegisterResponse response = authService.registerUser(request);
 
@@ -28,7 +29,7 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<LoginResponse> loginUser(@RequestBody LoginRequest request) throws AthidhiException {
+    public ResponseEntity<LoginResponse> loginUser(@Valid @RequestBody LoginRequest request) throws AthidhiException {
 
         LoginResponse response = authService.loginUser(request);
 
@@ -56,6 +57,23 @@ public class AuthController {
         else if (dob != null && mobileNumber != null) {
 
             response = authService.findUserIdByMobileNumberAndDOB(mobileNumber,dob);
+        } else if (email != null && mobileNumber != null) {
+
+            response = authService.findUserIdByMobileNumberAndEmail(mobileNumber,email);
+        } else  if (dob != null) {
+
+            response = authService.findUserIdByDob(dob);
+        }
+        else if (mobileNumber != null) {
+
+            response = authService.findUserIdByMobileNumber(mobileNumber);
+        }
+        else if (email != null) {
+
+            response = authService.findUserIdByEmail(email);
+        }
+        else{
+            throw new  AthidhiException("Input atleast one field for search");
         }
 
         return ResponseEntity.ok(response);
@@ -63,7 +81,7 @@ public class AuthController {
     }
 
     @PostMapping("/verify-user")
-    public ResponseEntity<ForgotPasswordResponse> verifyUser(@RequestBody ForgotPasswordRequest request)
+    public ResponseEntity<ForgotPasswordResponse> verifyUser(@Valid @RequestBody ForgotPasswordRequest request)
             throws AthidhiException {
 
         ForgotPasswordResponse response =authService.verifyUser(request);
@@ -72,7 +90,7 @@ public class AuthController {
     }
 
     @PostMapping("/reset-password")
-    public ResponseEntity<ResetPasswordResponse> esetPassword(@RequestBody ResetPasswordRequest request)
+    public ResponseEntity<ResetPasswordResponse> resetPassword(@Valid @RequestBody ResetPasswordRequest request)
             throws AthidhiException {
 
         ResetPasswordResponse response = authService.resetPassword(request);

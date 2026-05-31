@@ -86,7 +86,7 @@ public class AuthService {
         long count =
                 userRepository.count() + 1;
 
-        String Role = request.getUserRole();
+        String Role = request.getUserRole().toString();
 
         if(Role.equalsIgnoreCase("ADMIN"))
         {
@@ -151,6 +151,16 @@ public class AuthService {
         }
     }
 
+    public RegisterResponse findUserIdByMobileNumberAndEmail(String mobileNumber, String email) throws AthidhiException {
+        Optional<User> user = userRepository.findByMobileNumberAndEmail(mobileNumber, email);
+        if (user.isPresent()) {
+            return new RegisterResponse("success", user.get().getUserId(), "User Found");
+        }
+        else {
+            throw new AthidhiException("Invalid Mobile Number or Email Details");
+        }
+    }
+
     public RegisterResponse findUserIDByDOBAndMobileNumberAndEmail(LocalDate dob,
                                             String mobileNumber, String email) throws AthidhiException {
 
@@ -163,6 +173,36 @@ public class AuthService {
             throw new AthidhiException("Invalid Mobile Number or Email or DOB Details");
         }
 
+    }
+
+    public RegisterResponse findUserIdByDob(LocalDate dob) throws AthidhiException {
+        Optional<User> user = userRepository.findByDob(dob);
+        if (user.isPresent()) {
+            return new RegisterResponse("success", user.get().getUserId(), "User Found");
+        }
+        else  {
+            throw new AthidhiException("Invalid Dob Details");
+        }
+    }
+
+    public RegisterResponse findUserIdByEmail(String email) throws AthidhiException {
+        Optional<User> user = userRepository.findByEmail(email);
+        if (user.isPresent()) {
+            return new RegisterResponse("success", user.get().getUserId(), "User Found");
+        }
+        else  {
+            throw new AthidhiException("Invalid Email ID");
+        }
+    }
+
+    public RegisterResponse findUserIdByMobileNumber(String mobileNumber) throws AthidhiException {
+        Optional<User> user = userRepository.findByMobileNumber(mobileNumber);
+        if (user.isPresent()) {
+            return new RegisterResponse("success", user.get().getUserId(), "User Found");
+        }
+        else  {
+            throw new AthidhiException("Invalid Mobile Number");
+        }
     }
 
     public ForgotPasswordResponse verifyUser(ForgotPasswordRequest request) throws AthidhiException {

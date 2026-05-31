@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import com.athidhi.auth_service.Enums.Gender;
+import com.athidhi.auth_service.Enums.UserRole;
 
 import java.time.LocalDate;
 
@@ -32,14 +34,16 @@ public class User {
     @Column(name = "last_name")
     private String lastName;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "user_role")
-    private String userRole;
+    private UserRole userRole;
 
     @Column(name = "dob")
     private LocalDate dob;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "gender")
-    private String gender;
+    private Gender gender;
 
     @Column(name = "mobile_number")
     private String mobileNumber;
