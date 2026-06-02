@@ -1,0 +1,52 @@
+2026-06-03 00:06:40 [http-nio-5050-exec-2] [REQUEST_ID:2788de2e] INFO  SECURITY_LOGGER - 
+================= SECURITY =================
+
+ACTION      : TOKEN_GENERATED
+
+USER_ID     : ADM0001
+
+============================================
+
+
+2026-06-03 00:06:40 [http-nio-5050-exec-2] [REQUEST_ID:2788de2e] INFO  SECURITY_LOGGER - 
+================= SECURITY =================
+
+ACTION      : LOGIN_SUCCESS
+
+USER_ID     : ADM0001
+
+============================================
+
+
+2026-06-03 00:06:58 [http-nio-5050-exec-3] [REQUEST_ID:50c5d95d] INFO  SECURITY_LOGGER - 
+================= SECURITY =================
+
+ACTION      : TOKEN_GENERATED
+
+USER_ID     : ADM0001
+
+============================================
+
+
+2026-06-03 00:06:58 [http-nio-5050-exec-3] [REQUEST_ID:50c5d95d] INFO  SECURITY_LOGGER - 
+================= SECURITY =================
+
+ACTION      : LOGIN_SUCCESS
+
+USER_ID     : ADM0001
+
+============================================
+
+
+2026-06-03 00:07:28 [http-nio-5050-exec-4] [REQUEST_ID:e7d3fd0d] WARN  SECURITY_LOGGER - 
+================= SECURITY =================
+
+ACTION      : LOGIN_FAILED
+
+USER_ID     : ADM0002
+
+REASON      : USER_NOT_FOUND
+
+============================================
+
+

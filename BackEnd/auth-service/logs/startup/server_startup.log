@@ -1,0 +1,142 @@
+2026-06-02 23:46:56 [background-preinit] [REQUEST_ID:] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-06-02 23:46:56 [restartedMain] [REQUEST_ID:] INFO  com.athidhi.auth_service.AuthServiceApplication - Starting AuthServiceApplication using Java 22.0.1 with PID 11024 (D:\Athidhi-Gruha-Project\BackEnd\auth-service\target\classes started by vijay in D:\Athidhi-Gruha-Project\BackEnd\auth-service)
+2026-06-02 23:46:56 [restartedMain] [REQUEST_ID:] INFO  com.athidhi.auth_service.AuthServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-02 23:46:56 [restartedMain] [REQUEST_ID:] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-02 23:46:56 [restartedMain] [REQUEST_ID:] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-02 23:46:58 [restartedMain] [REQUEST_ID:] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-02 23:46:58 [restartedMain] [REQUEST_ID:] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 87 ms. Found 1 JPA repository interface.
+2026-06-02 23:46:59 [restartedMain] [REQUEST_ID:] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 5050 (http)
+2026-06-02 23:46:59 [restartedMain] [REQUEST_ID:] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-5050"]
+2026-06-02 23:46:59 [restartedMain] [REQUEST_ID:] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-02 23:46:59 [restartedMain] [REQUEST_ID:] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-02 23:46:59 [restartedMain] [REQUEST_ID:] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-06-02 23:46:59 [restartedMain] [REQUEST_ID:] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3172 ms
+2026-06-02 23:47:00 [restartedMain] [REQUEST_ID:] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-02 23:47:00 [restartedMain] [REQUEST_ID:] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-02 23:47:00 [restartedMain] [REQUEST_ID:] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-06-02 23:47:00 [restartedMain] [REQUEST_ID:] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-02 23:47:00 [restartedMain] [REQUEST_ID:] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-02 23:47:01 [restartedMain] [REQUEST_ID:] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13e31dce
+2026-06-02 23:47:01 [restartedMain] [REQUEST_ID:] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-02 23:47:01 [restartedMain] [REQUEST_ID:] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-02 23:47:02 [restartedMain] [REQUEST_ID:] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-02 23:47:02 [restartedMain] [REQUEST_ID:] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-02 23:47:03 [restartedMain] [REQUEST_ID:] INFO  STARTUP_LOGGER - ==========================================
+2026-06-02 23:47:03 [restartedMain] [REQUEST_ID:] INFO  STARTUP_LOGGER - Application Name : auth-service
+2026-06-02 23:47:03 [restartedMain] [REQUEST_ID:] INFO  STARTUP_LOGGER - Server Port      : 5050
+2026-06-02 23:47:03 [restartedMain] [REQUEST_ID:] INFO  STARTUP_LOGGER - Java Version     : 22.0.1
+2026-06-02 23:47:03 [restartedMain] [REQUEST_ID:] INFO  STARTUP_LOGGER - Operating System : Windows 11
+2026-06-02 23:47:03 [restartedMain] [REQUEST_ID:] INFO  STARTUP_LOGGER - ==========================================
+2026-06-02 23:47:03 [restartedMain] [REQUEST_ID:] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-02 23:47:04 [restartedMain] [REQUEST_ID:] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-06-02 23:47:04 [restartedMain] [REQUEST_ID:] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-5050"]
+2026-06-02 23:47:04 [restartedMain] [REQUEST_ID:] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 5050 (http) with context path '/'
+2026-06-02 23:47:04 [restartedMain] [REQUEST_ID:] INFO  com.athidhi.auth_service.AuthServiceApplication - Started AuthServiceApplication in 9.111 seconds (process running for 9.857)
+2026-06-02 23:47:20 [http-nio-5050-exec-1] [REQUEST_ID:] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-02 23:47:20 [http-nio-5050-exec-1] [REQUEST_ID:] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-02 23:47:20 [http-nio-5050-exec-1] [REQUEST_ID:] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-06-02 23:47:21 [http-nio-5050-exec-1] [REQUEST_ID:488e5dc1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.athidhi.auth_service.Exception.AthidhiException: Invalid User-ID]
+2026-06-02 23:51:03 [http-nio-5050-exec-10] [REQUEST_ID:62d2a0ae] INFO  org.springdoc.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 506 ms
+2026-06-03 00:00:08 [SpringApplicationShutdownHook] [REQUEST_ID:] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-03 00:00:08 [tomcat-shutdown] [REQUEST_ID:] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-03 00:00:08 [SpringApplicationShutdownHook] [REQUEST_ID:] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-03 00:00:08 [SpringApplicationShutdownHook] [REQUEST_ID:] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-03 00:00:08 [SpringApplicationShutdownHook] [REQUEST_ID:] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-03 00:00:14 [background-preinit] [REQUEST_ID:] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-06-03 00:00:14 [restartedMain] [REQUEST_ID:] INFO  com.athidhi.auth_service.AuthServiceApplication - Starting AuthServiceApplication using Java 22.0.1 with PID 16580 (D:\Athidhi-Gruha-Project\BackEnd\auth-service\target\classes started by vijay in D:\Athidhi-Gruha-Project\BackEnd\auth-service)
+2026-06-03 00:00:14 [restartedMain] [REQUEST_ID:] INFO  com.athidhi.auth_service.AuthServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-03 00:00:14 [restartedMain] [REQUEST_ID:] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-03 00:00:14 [restartedMain] [REQUEST_ID:] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-03 00:00:16 [restartedMain] [REQUEST_ID:] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-03 00:00:16 [restartedMain] [REQUEST_ID:] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 120 ms. Found 1 JPA repository interface.
+2026-06-03 00:00:18 [restartedMain] [REQUEST_ID:] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 5050 (http)
+2026-06-03 00:00:18 [restartedMain] [REQUEST_ID:] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-5050"]
+2026-06-03 00:00:18 [restartedMain] [REQUEST_ID:] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-03 00:00:18 [restartedMain] [REQUEST_ID:] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-03 00:00:18 [restartedMain] [REQUEST_ID:] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-06-03 00:00:18 [restartedMain] [REQUEST_ID:] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3504 ms
+2026-06-03 00:00:18 [restartedMain] [REQUEST_ID:] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-03 00:00:18 [restartedMain] [REQUEST_ID:] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-03 00:00:19 [restartedMain] [REQUEST_ID:] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-06-03 00:00:19 [restartedMain] [REQUEST_ID:] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-03 00:00:19 [restartedMain] [REQUEST_ID:] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-03 00:00:20 [restartedMain] [REQUEST_ID:] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61e968f6
+2026-06-03 00:00:20 [restartedMain] [REQUEST_ID:] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-03 00:00:20 [restartedMain] [REQUEST_ID:] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-03 00:00:21 [restartedMain] [REQUEST_ID:] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-03 00:00:21 [restartedMain] [REQUEST_ID:] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-03 00:00:22 [restartedMain] [REQUEST_ID:] INFO  STARTUP_LOGGER - ==========================================
+2026-06-03 00:00:22 [restartedMain] [REQUEST_ID:] INFO  STARTUP_LOGGER - Application Name : auth-service
+2026-06-03 00:00:22 [restartedMain] [REQUEST_ID:] INFO  STARTUP_LOGGER - Server Port      : 5050
+2026-06-03 00:00:22 [restartedMain] [REQUEST_ID:] INFO  STARTUP_LOGGER - Java Version     : 22.0.1
+2026-06-03 00:00:22 [restartedMain] [REQUEST_ID:] INFO  STARTUP_LOGGER - Operating System : Windows 11
+2026-06-03 00:00:22 [restartedMain] [REQUEST_ID:] INFO  STARTUP_LOGGER - ==========================================
+2026-06-03 00:00:22 [restartedMain] [REQUEST_ID:] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-03 00:00:23 [restartedMain] [REQUEST_ID:] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-06-03 00:00:23 [restartedMain] [REQUEST_ID:] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-5050"]
+2026-06-03 00:00:23 [restartedMain] [REQUEST_ID:] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 5050 (http) with context path '/'
+2026-06-03 00:00:23 [restartedMain] [REQUEST_ID:] INFO  com.athidhi.auth_service.AuthServiceApplication - Started AuthServiceApplication in 10.226 seconds (process running for 11.032)
+2026-06-03 00:05:50 [SpringApplicationShutdownHook] [REQUEST_ID:] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-03 00:05:50 [tomcat-shutdown] [REQUEST_ID:] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-03 00:05:50 [SpringApplicationShutdownHook] [REQUEST_ID:] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-03 00:05:50 [SpringApplicationShutdownHook] [REQUEST_ID:] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-03 00:05:50 [SpringApplicationShutdownHook] [REQUEST_ID:] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-03 00:05:56 [background-preinit] [REQUEST_ID:] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-06-03 00:05:56 [restartedMain] [REQUEST_ID:] INFO  com.athidhi.auth_service.AuthServiceApplication - Starting AuthServiceApplication using Java 22.0.1 with PID 19904 (D:\Athidhi-Gruha-Project\BackEnd\auth-service\target\classes started by vijay in D:\Athidhi-Gruha-Project\BackEnd\auth-service)
+2026-06-03 00:05:56 [restartedMain] [REQUEST_ID:] INFO  com.athidhi.auth_service.AuthServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-03 00:05:56 [restartedMain] [REQUEST_ID:] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-03 00:05:56 [restartedMain] [REQUEST_ID:] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-03 00:05:58 [restartedMain] [REQUEST_ID:] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-03 00:05:58 [restartedMain] [REQUEST_ID:] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 83 ms. Found 1 JPA repository interface.
+2026-06-03 00:05:59 [restartedMain] [REQUEST_ID:] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 5050 (http)
+2026-06-03 00:05:59 [restartedMain] [REQUEST_ID:] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-5050"]
+2026-06-03 00:05:59 [restartedMain] [REQUEST_ID:] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-03 00:05:59 [restartedMain] [REQUEST_ID:] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-03 00:06:00 [restartedMain] [REQUEST_ID:] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-06-03 00:06:00 [restartedMain] [REQUEST_ID:] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3418 ms
+2026-06-03 00:06:00 [restartedMain] [REQUEST_ID:] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-03 00:06:00 [restartedMain] [REQUEST_ID:] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-03 00:06:00 [restartedMain] [REQUEST_ID:] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-06-03 00:06:00 [restartedMain] [REQUEST_ID:] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-03 00:06:01 [restartedMain] [REQUEST_ID:] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-03 00:06:01 [restartedMain] [REQUEST_ID:] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c804486
+2026-06-03 00:06:01 [restartedMain] [REQUEST_ID:] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-03 00:06:01 [restartedMain] [REQUEST_ID:] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-03 00:06:02 [restartedMain] [REQUEST_ID:] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-03 00:06:02 [restartedMain] [REQUEST_ID:] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-03 00:06:03 [restartedMain] [REQUEST_ID:] INFO  STARTUP_LOGGER - ==========================================
+2026-06-03 00:06:03 [restartedMain] [REQUEST_ID:] INFO  STARTUP_LOGGER - Application Name : auth-service
+2026-06-03 00:06:03 [restartedMain] [REQUEST_ID:] INFO  STARTUP_LOGGER - Server Port      : 5050
+2026-06-03 00:06:03 [restartedMain] [REQUEST_ID:] INFO  STARTUP_LOGGER - Java Version     : 22.0.1
+2026-06-03 00:06:03 [restartedMain] [REQUEST_ID:] INFO  STARTUP_LOGGER - Operating System : Windows 11
+2026-06-03 00:06:03 [restartedMain] [REQUEST_ID:] INFO  STARTUP_LOGGER - ==========================================
+2026-06-03 00:06:03 [restartedMain] [REQUEST_ID:] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-03 00:06:04 [restartedMain] [REQUEST_ID:] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-06-03 00:06:04 [restartedMain] [REQUEST_ID:] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-5050"]
+2026-06-03 00:06:04 [restartedMain] [REQUEST_ID:] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 5050 (http) with context path '/'
+2026-06-03 00:06:04 [restartedMain] [REQUEST_ID:] INFO  com.athidhi.auth_service.AuthServiceApplication - Started AuthServiceApplication in 9.315 seconds (process running for 10.112)
+2026-06-03 00:06:39 [http-nio-5050-exec-2] [REQUEST_ID:] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-03 00:06:39 [http-nio-5050-exec-2] [REQUEST_ID:] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-03 00:06:39 [http-nio-5050-exec-2] [REQUEST_ID:] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-06-03 00:07:28 [http-nio-5050-exec-4] [REQUEST_ID:e7d3fd0d] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.athidhi.auth_service.Exception.AthidhiException: Invalid User-ID]

@@ -1,0 +1,69 @@
+2026-06-03 00:06:40 [http-nio-5050-exec-2] [REQUEST_ID:2788de2e] INFO  COMMUNICATION_LOGGER - 
+==================== REQUEST ====================
+REQUEST_ID   : 650c5446
+TIMESTAMP    : 2026-06-03T00:06:40.247059900
+METHOD       : POST
+URI          : /auth/login
+QUERY_PARAMS : N/A
+CLIENT_IP    : 0:0:0:0:0:0:0:1
+REQUEST_BODY : {
+    "userId":"ADM0001",
+    "password":"Vijay@250999"
+}
+================================================
+
+2026-06-03 00:06:40 [http-nio-5050-exec-2] [REQUEST_ID:2788de2e] INFO  COMMUNICATION_LOGGER - 
+==================== RESPONSE ===================
+REQUEST_ID   : 650c5446
+STATUS       : 200
+URI          : /auth/login
+DURATION_MS  : 700
+RESPONSE_BODY :{"status":"success","token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBRE0wMDAxIiwiaWF0IjoxNzgwNDI1NDAwLCJleHAiOjE3ODA0MjkwMDB9.ya49ZTJy5ufCkcsE6P2tnHwKiABV_3jc8dFo3b2s8ck","userId":"ADM0001","message":"Login Successful"}
+================================================
+
+2026-06-03 00:06:58 [http-nio-5050-exec-3] [REQUEST_ID:50c5d95d] INFO  COMMUNICATION_LOGGER - 
+==================== REQUEST ====================
+REQUEST_ID   : aedd507e
+TIMESTAMP    : 2026-06-03T00:06:58.540096400
+METHOD       : POST
+URI          : /auth/login
+QUERY_PARAMS : N/A
+CLIENT_IP    : 0:0:0:0:0:0:0:1
+REQUEST_BODY : {
+    "userId":"ADM0001",
+    "password":"Vijay@250999"
+}
+================================================
+
+2026-06-03 00:06:58 [http-nio-5050-exec-3] [REQUEST_ID:50c5d95d] INFO  COMMUNICATION_LOGGER - 
+==================== RESPONSE ===================
+REQUEST_ID   : aedd507e
+STATUS       : 200
+URI          : /auth/login
+DURATION_MS  : 83
+RESPONSE_BODY :{"status":"success","token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBRE0wMDAxIiwiaWF0IjoxNzgwNDI1NDE4LCJleHAiOjE3ODA0MjkwMTh9.Sr4v__CCpSTtRBUzgzqC0X_be2KwId1bQh872GBmxU0","userId":"ADM0001","message":"Login Successful"}
+================================================
+
+2026-06-03 00:07:28 [http-nio-5050-exec-4] [REQUEST_ID:e7d3fd0d] INFO  COMMUNICATION_LOGGER - 
+==================== REQUEST ====================
+REQUEST_ID   : 09b14a77
+TIMESTAMP    : 2026-06-03T00:07:28.853620300
+METHOD       : POST
+URI          : /auth/login
+QUERY_PARAMS : N/A
+CLIENT_IP    : 0:0:0:0:0:0:0:1
+REQUEST_BODY : {
+    "userId":"ADM0002",
+    "password":"Vijay@250999"
+}
+================================================
+
+2026-06-03 00:07:28 [http-nio-5050-exec-4] [REQUEST_ID:e7d3fd0d] INFO  COMMUNICATION_LOGGER - 
+==================== RESPONSE ===================
+REQUEST_ID   : 09b14a77
+STATUS       : 400
+URI          : /auth/login
+DURATION_MS  : 19
+RESPONSE_BODY :{"statusCode":400,"statusType":"error","errorMessage":"Invalid User-ID","timestamp":1780425448848}
+================================================
+

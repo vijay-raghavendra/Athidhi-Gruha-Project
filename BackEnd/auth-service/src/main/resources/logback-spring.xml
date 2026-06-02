@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+
+    <statusListener
+            class="ch.qos.logback.core.status.OnConsoleStatusListener"/>
+
+    <!-- LOG DIRECTORY -->
+
+    <property name="LOG_HOME"
+              value="logs"/>
+
+    <!-- ================================================= -->
+    <!-- STARTUP LOG FILE                                  -->
+    <!-- ================================================= -->
+
+    <appender name="STARTUP_FILE"
+              class="ch.qos.logback.core.FileAppender">
+
+        <file>${LOG_HOME}/startup/server_startup.log</file>
+
+        <encoder>
+
+            <pattern>
+                %d{yyyy-MM-dd HH:mm:ss} [%thread] [REQUEST_ID:%X{requestId}] %-5level %logger{50} - %msg%n
+            </pattern>
+
+        </encoder>
+
+    </appender>
+
+    <!-- ================================================= -->
+    <!-- COMMUNICATION LOG FILE                            -->
+    <!-- ================================================= -->
+
+    <appender name="COMMUNICATION_FILE"
+              class="ch.qos.logback.core.FileAppender">
+
+        <file>${LOG_HOME}/communication/server_communication.log</file>
+
+        <encoder>
+
+            <pattern>
+                %d{yyyy-MM-dd HH:mm:ss} [%thread] [REQUEST_ID:%X{requestId}] %-5level %logger{50} - %msg%n
+            </pattern>
+
+        </encoder>
+
+    </appender>
+
+    <!-- ================================================= -->
+    <!-- BUSINESS EXCEPTION FILE                           -->
+    <!-- ================================================= -->
+
+    <appender name="EXCEPTION_FILE"
+              class="ch.qos.logback.core.FileAppender">
+
+        <file>${LOG_HOME}/exception/server_business_exception.log</file>
+
+        <encoder>
+
+            <pattern>
+                %d{yyyy-MM-dd HH:mm:ss} [%thread] [REQUEST_ID:%X{requestId}] %-5level %logger{50} - %msg%n
+            </pattern>
+
+        </encoder>
+
+    </appender>
+
+    <!-- ================================================= -->
+    <!-- PERFORMANCE FILE                                  -->
+    <!-- ================================================= -->
+
+    <appender name="PERFORMANCE_FILE"
+              class="ch.qos.logback.core.FileAppender">
+
+        <file>${LOG_HOME}/performance/server_performance.log</file>
+
+        <encoder>
+
+            <pattern>
+                %d{yyyy-MM-dd HH:mm:ss} [%thread] [REQUEST_ID:%X{requestId}] %-5level %logger{50} - %msg%n
+            </pattern>
+
+        </encoder>
+
+    </appender>
+
+    <!-- ================================================= -->
+    <!-- SECURITY FILE                                     -->
+    <!-- ================================================= -->
+
+    <appender name="SECURITY_FILE"
+              class="ch.qos.logback.core.FileAppender">
+
+        <file>
+            ${LOG_HOME}/security/server_security.log
+        </file>
+
+        <encoder>
+
+            <pattern>
+                %d{yyyy-MM-dd HH:mm:ss} [%thread] [REQUEST_ID:%X{requestId}] %-5level %logger{50} - %msg%n
+            </pattern>
+
+        </encoder>
+
+    </appender>
+
+    <!-- ================================================= -->
+    <!-- STARTUP LOGGER                                    -->
+    <!-- ================================================= -->
+
+    <logger name="STARTUP_LOGGER"
+            level="INFO"
+            additivity="false">
+
+        <appender-ref ref="STARTUP_FILE"/>
+
+    </logger>
+
+    <!-- ================================================= -->
+    <!-- COMMUNICATION LOGGER                              -->
+    <!-- ================================================= -->
+
+    <logger name="COMMUNICATION_LOGGER"
+            level="INFO"
+            additivity="false">
+
+        <appender-ref ref="COMMUNICATION_FILE"/>
+
+    </logger>
+
+    <!-- ================================================= -->
+    <!-- EXCEPTION LOGGER                                  -->
+    <!-- ================================================= -->
+
+    <logger name="EXCEPTION_LOGGER"
+            level="ERROR"
+            additivity="false">
+
+        <appender-ref ref="EXCEPTION_FILE"/>
+
+    </logger>
+
+    <!-- ================================================= -->
+    <!-- PERFORMANCE LOGGER                                -->
+    <!-- ================================================= -->
+
+    <logger name="PERFORMANCE_LOGGER"
+            level="INFO"
+            additivity="false">
+
+        <appender-ref ref="PERFORMANCE_FILE"/>
+
+    </logger>
+
+    <!-- ================================================= -->
+    <!-- SECURITY LOGGER                                   -->
+    <!-- ================================================= -->
+
+    <logger name="SECURITY_LOGGER"
+            level="INFO"
+            additivity="false">
+
+        <appender-ref ref="SECURITY_FILE"/>
+
+    </logger>
+
+    <root level="INFO" >
+        <appender-ref ref="STARTUP_FILE"/>
+    </root>
+
+</configuration>

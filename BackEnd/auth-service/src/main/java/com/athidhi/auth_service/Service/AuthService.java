@@ -3,6 +3,7 @@ package com.athidhi.auth_service.Service;
 import com.athidhi.auth_service.DTO.*;
 import com.athidhi.auth_service.Entity.User;
 import com.athidhi.auth_service.Exception.AthidhiException;
+import com.athidhi.auth_service.Logging.SecurityLoggerUtil;
 import com.athidhi.auth_service.Repository.UserRepository;
 
 import lombok.*;
@@ -21,6 +22,8 @@ public class AuthService {
     private final PasswordEncoder passwordEncoder;
 
     private final JwtService jwtService;
+
+    private final SecurityLoggerUtil securityLoggerUtil;
 
     public RegisterResponse registerUser(
             RegisterRequest request) throws AthidhiException {
@@ -106,7 +109,12 @@ public class AuthService {
     public LoginResponse loginUser(LoginRequest request) throws AthidhiException {
 
         User user = userRepository.findByUserId(request.getUserId())
-                    .orElseThrow(() -> new AthidhiException("Invalid User-ID")
+                .orElseThrow(() ->
+                        {
+                            securityLoggerUtil.logLoginFailure(request.getUserId(),"USER_NOT_FOUND");
+                            return new AthidhiException("Invalid User-ID");
+                        }
+
                 );
 
         /* PASSWORD VALIDATION */
@@ -118,6 +126,7 @@ public class AuthService {
 
         if (!passwordMatches) {
 
+            securityLoggerUtil.logLoginFailure(request.getUserId(),"INVALID_PASSWORD");
             throw new AthidhiException("Invalid Password");
         }
 
@@ -125,6 +134,9 @@ public class AuthService {
 
         String token = jwtService.generateToken(user.getUserId());
 
+        securityLoggerUtil.logTokenGenerated(user.getUserId());
+
+        securityLoggerUtil.logLoginSuccess(user.getUserId());
         return new LoginResponse("success", token, user.getUserId(), "Login Successful");
     }
 
@@ -216,6 +228,8 @@ public class AuthService {
                 .orElseThrow(() ->new AthidhiException("Entered details do not match")
                 );
 
+        securityLoggerUtil.logPasswordResetVerification(request.getUserId());
+
         return new ForgotPasswordResponse("success","User Verified Successfully");
     }
 
@@ -228,6 +242,8 @@ public class AuthService {
         user.setPassword(passwordEncoder.encode(request.getNewPassword()));
 
         userRepository.save(user);
+
+        securityLoggerUtil.logPasswordReset(request.getUserId());
 
         return new ResetPasswordResponse("success","Password Reset Successful");
     }

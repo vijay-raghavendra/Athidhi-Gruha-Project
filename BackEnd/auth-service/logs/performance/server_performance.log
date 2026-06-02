@@ -1,0 +1,27 @@
+2026-06-03 00:06:40 [http-nio-5050-exec-2] [REQUEST_ID:2788de2e] WARN  PERFORMANCE_LOGGER - 
+================ PERFORMANCE ================
+URI          : /auth/login
+METHOD       : POST
+EXECUTION_MS : 700
+CATEGORY     : SLOW_REQUEST
+=============================================
+
+
+2026-06-03 00:06:58 [http-nio-5050-exec-3] [REQUEST_ID:50c5d95d] INFO  PERFORMANCE_LOGGER - 
+================ PERFORMANCE ================
+URI          : /auth/login
+METHOD       : POST
+EXECUTION_MS : 83
+CATEGORY     : NORMAL_REQUEST
+=============================================
+
+
+2026-06-03 00:07:28 [http-nio-5050-exec-4] [REQUEST_ID:e7d3fd0d] INFO  PERFORMANCE_LOGGER - 
+================ PERFORMANCE ================
+URI          : /auth/login
+METHOD       : POST
+EXECUTION_MS : 17
+CATEGORY     : NORMAL_REQUEST
+=============================================
+
+
